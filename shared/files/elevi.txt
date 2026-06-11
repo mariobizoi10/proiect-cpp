@@ -1,4 +1,12 @@
 1 Popa_Ion 10
 2 Ionescu_Maria 9
 3 Vasilescu_Andrei 11
-5 Popescu_Ion 10
+4 Stan_Gigel 10
+5 Popescu_Dan 12
+6 Radu_Elena 9
+7 Mihai_Cristina 11
+8 Enache_Vlad 10
+9 Toma_Ana 12
+10 Marin_Razvan 9
+11 Dumitru_Ioana 11
+12 Stoica_Mihai 10
