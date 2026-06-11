@@ -1,0 +1,4 @@
+1 Fizica 12 05 2026 0
+1 Sport 15 05 2026 1
+2 Matematica 06 05 2026 0
+3 Informatica 10 06 2026 0

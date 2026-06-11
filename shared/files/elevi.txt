@@ -1,1 +1,4 @@
-
+1 Popa_Ion 10
+2 Ionescu_Maria 9
+3 Vasilescu_Andrei 11
+5 Popescu_Ion 10
