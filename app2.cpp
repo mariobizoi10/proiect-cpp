@@ -5,6 +5,7 @@
 #include <algorithm>
 #include <map>
 #include <iomanip>
+#include <cstdlib>
 
 #include "shared/classes/Elev.h"
 #include "shared/classes/Nota.h"
@@ -82,9 +83,45 @@ void afiseazaMediiElev(int idElev, const std::vector<Nota>& note) {
 }
 
 int main(int argc, char* argv[]) {
+    system("cls");
     if (argc < 2) {
-        std::cout << "Eroare: Lipseste comanda.\n";
-        std::cout << "Exemplu: ./app_2.exe vizualizare_catalog\n";
+        std::cout << "Eroare: Lipseste comanda.\n\n";
+
+        std::cout << "COMENZI DISPONIBILE:\n\n";
+
+        std::cout << "1.Vizualizare catalog:\n";
+        std::cout << "  app2.exe vizualizare_catalog\n\n";
+
+        std::cout << "2.Vizualizare elev:\n";
+        std::cout << "  app2.exe vizualizare_elev <id_elev>\n\n";
+
+        std::cout << "3.Adaugare elev:\n";
+        std::cout << "  app2.exe adaugare_elev <id_elev> <nume_complet> <clasa>\n";
+        std::cout << "  campul <nume_complet> se va completa sub forma Nume_Prenume\n\n";
+
+        std::cout << "4.Stergere elev:\n";
+        std::cout << "  app2.exe stergere_elev <id_elev>\n\n";
+
+        std::cout << "5.Adaugare nota:\n";
+        std::cout << "  app2.exe adaugare_nota <id_elev> <materie> <valoare> <zi> <luna> <an>\n\n";
+
+        std::cout << "6.Stergere nota:\n";
+        std::cout << "  app2.exe stergere_nota <id_elev> <materie> <zi> <luna> <an>\n\n";
+
+        std::cout << "7.Adaugare absenta:\n";
+        std::cout << "  app2.exe adaugare_absenta <id_elev> <materie> <zi> <luna> <an>\n\n";
+
+        std::cout << "8.Stergere absenta:\n";
+        std::cout << "  app2.exe stergere_absenta <id_elev> <materie> <zi> <luna> <an>\n\n";
+
+        std::cout << "9.Motivare absenta:\n";
+        std::cout << "  app2.exe motivare_absenta <id_elev> <materie> <zi> <luna> <an>\n\n";
+
+        std::cout << "10.Vizualizare cereri:\n";
+        std::cout << "  app2.exe vizualizare_cereri\n\n";
+
+        std::cout << "11.Aprobare cerere <id_elev> <materie> <zi> <luna> <an>\n";
+        std::cout << "  app2.exe aprobare_cerere <id_elev> <materie> <zi> <luna> <an>\n\n";
         return 1;
     }
 
@@ -355,7 +392,43 @@ int main(int argc, char* argv[]) {
         }
     }
     else {
-        std::cout << "Comanda necunoscuta: " << comanda << "\n";
+        std::cout << "Comanda necunoscuta: " << comanda << "\n\n";
+
+        std::cout << "COMENZI DISPONIBILE:\n\n";
+
+        std::cout << "1.Vizualizare catalog:\n";
+        std::cout << "  app2.exe vizualizare_catalog\n\n";
+
+        std::cout << "2.Vizualizare elev:\n";
+        std::cout << "  app2.exe vizualizare_elev <id_elev>\n\n";
+
+        std::cout << "3.Adaugare elev:\n";
+        std::cout << "  app2.exe adaugare_elev <id_elev> <nume_complet> <clasa>\n";
+        std::cout << "  campul <nume_complet> se va completa sub forma Nume_Prenume\n\n";
+
+        std::cout << "4.Stergere elev:\n";
+        std::cout << "  app2.exe stergere_elev <id_elev>\n\n";
+
+        std::cout << "5.Adaugare nota:\n";
+        std::cout << "  app2.exe adaugare_nota <id_elev> <materie> <valoare> <zi> <luna> <an>\n\n";
+
+        std::cout << "6.Stergere nota:\n";
+        std::cout << "  app2.exe stergere_nota <id_elev> <materie> <zi> <luna> <an>\n\n";
+
+        std::cout << "7.Adaugare absenta:\n";
+        std::cout << "  app2.exe adaugare_absenta <id_elev> <materie> <zi> <luna> <an>\n\n";
+
+        std::cout << "8.Stergere absenta:\n";
+        std::cout << "  app2.exe stergere_absenta <id_elev> <materie> <zi> <luna> <an>\n\n";
+
+        std::cout << "9.Motivare absenta:\n";
+        std::cout << "  app2.exe motivare_absenta <id_elev> <materie> <zi> <luna> <an>\n\n";
+
+        std::cout << "10.Vizualizare cereri:\n";
+        std::cout << "  app2.exe vizualizare_cereri\n\n";
+
+        std::cout << "11.Aprobare cerere <id_elev> <materie> <zi> <luna> <an>\n";
+        std::cout << "  app2.exe aprobare_cerere <id_elev> <materie> <zi> <luna> <an>\n\n";
         return 1;
     }
 
