@@ -5,6 +5,7 @@
 #include <algorithm>
 #include <map>
 #include <iomanip>
+#include <cstdlib>
 
 #include "shared/classes/Elev.h"
 #include "shared/classes/Nota.h"
@@ -54,10 +55,28 @@ std::string formateazaNume(std::string nume) {
 }
 
 int main(int argc, char* argv[]) {
+    system("cls");
     if (argc < 2) {
-        std::cout << "Eroare: Lipseste comanda.\n";
-        std::cout << "Exemplu: ./app_1.exe vizualizare_note 1\n";
-        return 1;
+    std::cout << "Eroare: Lipseste comanda.\n\n";
+
+    std::cout << "COMENZI DISPONIBILE:\n\n";
+
+    std::cout << "1. Vizualizare note:\n";
+    std::cout << "   app1.exe vizualizare_note <id_elev> [materie]\n\n";
+
+    std::cout << "2. Vizualizare absente:\n";
+    std::cout << "   app1.exe vizualizare_absente <id_elev>\n\n";
+
+    std::cout << "3. Vizualizare situatie scolara:\n";
+    std::cout << "   app1.exe vizualizare_situatie <id_elev>\n\n";
+
+    std::cout << "4. Depunere cerere motivare:\n";
+    std::cout << "   app1.exe depunere_cerere_motivare <id_elev> <materie> <zi> <luna> <an>\n\n";
+
+    std::cout << "5. Vizualizare cereri motivare:\n";
+    std::cout << "   app1.exe vizualizare_cereri <id_elev>\n\n";
+
+    return 1;
     }
 
     std::string comanda = argv[1];
@@ -69,8 +88,9 @@ int main(int argc, char* argv[]) {
     std::vector<CerereMotivare> cereri = citesteDinFisier<CerereMotivare>(CALE_CERERI);
 
     if (comanda == "vizualizare_note") {
+        system("cls");
         if (argc != 3 && argc != 4) {
-            std::cout << "Folosire: ./app_1.exe vizualizare_note <id_elev> [materie]\n";
+            std::cout << "Folosire: ./app1.exe vizualizare_note <id_elev> [materie]\n";
             return 1;
         }
         int id = std::stoi(argv[2]);
@@ -98,6 +118,7 @@ int main(int argc, char* argv[]) {
             }
         }
         else if (argc == 4) {
+            system("cls");
             // afisam notele doar pentru o materie specifica
             std::string materie = argv[3];
             bool gasit = false;
@@ -114,8 +135,9 @@ int main(int argc, char* argv[]) {
         }
     }
     else if (comanda == "vizualizare_absente") {
+        system("cls");
         if (argc != 3) {
-            std::cout << "Folosire: ./app_1.exe vizualizare_absente <id_elev>\n";
+            std::cout << "Folosire: ./app1.exe vizualizare_absente <id_elev>\n";
             return 1;
         }
         int id = std::stoi(argv[2]);
@@ -134,8 +156,9 @@ int main(int argc, char* argv[]) {
         }
     }
     else if (comanda == "vizualizare_situatie") {
+        system("cls");
         if (argc != 3) {
-            std::cout << "Folosire: ./app_1.exe vizualizare_situatie <id_elev>\n";
+            std::cout << "Folosire: ./app1.exe vizualizare_situatie <id_elev>\n";
             return 1;
         }
         int id = std::stoi(argv[2]);
@@ -192,8 +215,9 @@ int main(int argc, char* argv[]) {
         else std::cout << "Total absente nemotivate: " << nemotivate << "\n";
     }
     else if (comanda == "depunere_cerere_motivare") {
+        system("cls");
         if (argc != 7) {
-            std::cout << "Folosire: ./app_1.exe depunere_cerere_motivare <id> <materie> <zi> <luna> <an>\n";
+            std::cout << "Folosire: ./app1.exe depunere_cerere_motivare <id> <materie> <zi> <luna> <an>\n";
             return 1;
         }
         int id = std::stoi(argv[2]);
@@ -232,8 +256,9 @@ int main(int argc, char* argv[]) {
         std::cout << "Cererea a fost depusa cu succes.\n";
     }
     else if (comanda == "vizualizare_cereri") {
+        system("cls");
         if (argc != 3) {
-            std::cout << "Folosire: ./app_1.exe vizualizare_cereri <id_elev>\n";
+            std::cout << "Folosire: ./app1.exe vizualizare_cereri <id_elev>\n";
             return 1;
         }
         int id = std::stoi(argv[2]);
@@ -251,8 +276,28 @@ int main(int argc, char* argv[]) {
         }
     }
     else {
-        std::cout << "Comanda necunoscuta: " << comanda << "\n";
-        return 1;
+    system("cls");
+    std::cout << "Eroare: Lipseste comanda.\n\n";
+
+    std::cout << "COMENZI DISPONIBILE:\n\n";
+
+    std::cout << "1. Vizualizare note:\n";
+    std::cout << "   app1.exe vizualizare_note <id_elev> [materie]\n\n";
+
+    std::cout << "2. Vizualizare absente:\n";
+    std::cout << "   app1.exe vizualizare_absente <id_elev>\n\n";
+
+    std::cout << "3. Vizualizare situatie scolara:\n";
+    std::cout << "   app1.exe vizualizare_situatie <id_elev>\n\n";
+
+    std::cout << "4. Depunere cerere motivare:\n";
+    std::cout << "   app1.exe depunere_cerere_motivare <id_elev> <materie> <zi> <luna> <an>\n\n";
+
+    std::cout << "5. Vizualizare cereri motivare:\n";
+    std::cout << "   app1.exe vizualizare_cereri <id_elev>\n\n";
+
+    return 1;
+    
     }
 
     return 0;
