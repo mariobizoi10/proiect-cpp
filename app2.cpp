@@ -5,7 +5,6 @@
 #include <algorithm>
 #include <map>
 #include <iomanip>
-#include <cstdlib>
 
 #include "shared/classes/Elev.h"
 #include "shared/classes/Nota.h"
